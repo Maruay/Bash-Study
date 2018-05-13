@@ -33,7 +33,7 @@ pyramid.sh
 - replace ex. ${val//-/- /} [replace "-" with "- "]
 
 ---------------------
-Note
+>Note
 <pre><code>$ IFS=$'\r\n' GLOBIGNORE='*' command eval  'XYZ=($(cat /etc/passwd))'
 $ echo "${XYZ[5]}"
 sync:x:5:0:sync:/sbin:/bin/sync</pre></code>
