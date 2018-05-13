@@ -33,12 +33,12 @@ pyramid.sh
 - replace ex. ${val//-/- /} [replace "-" with "- "]
 
 Note
---------- Read Line from file to array ---------
-$ IFS=$'\r\n' GLOBIGNORE='*' command eval  'XYZ=($(cat /etc/passwd))'
+<pre><code>$ IFS=$'\r\n' GLOBIGNORE='*' command eval  'XYZ=($(cat /etc/passwd))'
 $ echo "${XYZ[5]}"
-sync:x:5:0:sync:/sbin:/bin/sync
+sync:x:5:0:sync:/sbin:/bin/sync</pre></code>
+
 CR: https://stackoverflow.com/questions/11393817/read-lines-from-a-file-into-a-bash-array
-------------------------------------------------
+
 
 CR: http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_08_02.html
 https://stackoverflow.com/questions/1224766/how-do-i-rename-the-extension-for-a-batch-of-files
@@ -47,15 +47,17 @@ http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html
 http://tldp.org/LDP/abs/html/comparison-ops.html
 https://www.youtube.com/watch?v=uqHjc7hlqd0&t=1602s
 
-------------------------------------------------
-Command Groups
-Subshell:
+# Command Groups
+
+<b>Subshell:</b>
+
 Evaluate list of commands in a subshell, meaning that its
 environment is distinct from the current shell and its
 parameters are contained.
->>>>>>>>>>>>>>>>>>>>>> (list) <<<<<<<<<<<<<<<<<<<<<<
+<center>(list)</center>
 
-Group command:
+<b>Group command:</b>
+
 Evaluate list of commands in the current shell, sharing
 the current shell's environment.
->>>>>>>>>>>>>>>>>>>>>> {list;} <<<<<<<<<<<<<<<<<<<<<<
+<center>{list;}</center>
