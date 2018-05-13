@@ -1,18 +1,28 @@
 #!/bin/bash
 # specific conversion script for extension x to y
+LIST=(Maruay Max Sun Big Bun Sky)
 
-#LIST="$(ls *.$1)"
-if [ -z "$1" ] || [ -z "$2" ]; then
-echo "Please fill both file's extension"
-else
-for file in *.$1; do
-NEWNAME="$(basename $file .$1).$2"
-cp $file $NEWNAME
-# echo "$(basename "$i" .$1).$2"
-# echo "${i/%.$1/.$2}"
-#NEWNAME=$(ls "$i" | sed -e 's/txt/php/")
-#cat beginfile > "$NEWNAME"
-#cat "$i" | sed -e '1,23d' | tac | sed -e '1,21d'| tac >> "$NEWNAME"
-#cat endfile >> "$NEWNAME"
+# for in range of number
+for rn in {1..5}; do
+echo "This is no.${rn}"
 done
-fi
+
+# while loop
+count=0
+while [[ ${LIST[count]} == M* ]];  # check value starts with "M"
+do
+echo ${LIST[count]}
+#count=$(( $count + 1 ))
+let "count++"
+done
+
+# note : unset - deleting value in array or the whole array
+
+# if [ -z "$1" ] || [ -z "$2" ]; then
+# echo "Please fill both file's extension"
+# else
+# for file in *.$1; do
+# NEWNAME="$(basename $file .$1).$2"
+# cp $file $NEWNAME
+# done
+# fi
