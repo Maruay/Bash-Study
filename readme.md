@@ -35,8 +35,8 @@ pyramid.sh
 
 >Note
 ><pre><code>$ IFS=$'\r\n' GLOBIGNORE='*' command eval  'XYZ=($(cat /etc/passwd))'
-$ echo "${XYZ[5]}"
-sync:x:5:0:sync:/sbin:/bin/sync</pre></code>
+>$ echo "${XYZ[5]}"
+>sync:x:5:0:sync:/sbin:/bin/sync</pre></code>
 
 >CR: https://stackoverflow.com/questions/11393817/read-lines-from-a-file-into-a-bash-array
 
