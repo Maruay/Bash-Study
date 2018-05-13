@@ -1,6 +1,9 @@
 #!/bin/bash
 # specific conversion script for extension x to y
-LIST=("Maruay" "Max" "Sun" "Big" "Bun" "Sky")
+#LIST=("Maruay" "Max" "Sun" "Big" "Bun" "Sky")
+
+#LIST=$(<friends.txt)
+IFS=$'\r\n' GLOBIGNORE='*' command eval  'LIST=($(cat friends.txt))'
 
 # for in range of number
 for rn in {1..5}; do
@@ -9,6 +12,7 @@ done
 
 # while loop
 count=0
+
 while [[ ${LIST[count]} == M* ]];  # check value starts with "M"
 do
 echo ${LIST[count]}
@@ -18,10 +22,10 @@ done
 
 select choice in ${LIST[@]}; do  # ${LIST[@]} & ${List[*]} are work well
 	echo $REPLY : ${choice}
-	exit 1
+	break
 done
 
-
+if [ -f test.sh ]; then echo "test.sh exists"; else echo "test.sh doesn't exist"; fi
 
 # note : unset - deleting value in array or the whole array
 
