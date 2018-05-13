@@ -1,6 +1,6 @@
 #!/bin/bash
 # specific conversion script for extension x to y
-LIST=(Maruay Max Sun Big Bun Sky)
+LIST=("Maruay" "Max" "Sun" "Big" "Bun" "Sky")
 
 # for in range of number
 for rn in {1..5}; do
@@ -15,6 +15,13 @@ echo ${LIST[count]}
 #count=$(( $count + 1 ))
 let "count++"
 done
+
+select choice in ${LIST[@]}; do  # ${LIST[@]} & ${List[*]} are work well
+	echo $REPLY : ${choice}
+	exit 1
+done
+
+
 
 # note : unset - deleting value in array or the whole array
 
