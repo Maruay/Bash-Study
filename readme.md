@@ -32,7 +32,19 @@ pyramid.sh
 - if statement in one line
 - replace ex. ${val//-/- /} [replace "-" with "- "]
 
+<pre><code>df # Displays the amount of disk space available
+- -h # human readable format (K, M, G)
+- -T # print file system type
 
+cut # Remove or "cut out" sections of each line of a file or files.
+- -c # characters
+Ex. 	cut -c 3-12 data.txt -> e two thre
+- -f # fields
+Ex. 	cut -f 3 data.txt -> tree
+	cut -f 2-3 data.txt -> two three four
+	cut -f 1-2,4-5 data.txt -> one two four five
+	cut -f 3- data.txt -> three four five
+	cut -f -3 data.txt -> one two three</code></pre>
 >Note
 ><pre><code>$ IFS=$'\r\n' GLOBIGNORE='*' command eval  'XYZ=($(cat /etc/passwd))'
 >$ echo "${XYZ[5]}"
@@ -46,6 +58,7 @@ https://www.cyberciti.biz/faq/bash-for-loop/
 http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html
 http://tldp.org/LDP/abs/html/comparison-ops.html
 https://www.youtube.com/watch?v=uqHjc7hlqd0&t=1602s
+https://www.computerhope.com/unix.htm
 
 # Command Groups
 

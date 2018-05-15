@@ -27,6 +27,13 @@ done
 
 if [ -f test.sh ]; then echo "test.sh exists"; else echo "test.sh doesn't exist"; fi
 
+count=1
+until [ $count -gt 5 ]
+do
+printf "Count has a value of ${count}\n"
+((count++))
+done
+
 # note : unset - deleting value in array or the whole array
 
 # if [ -z "$1" ] || [ -z "$2" ]; then
