@@ -5,6 +5,7 @@ test.sh
 - read
 - if statement
 - case statement
+- sub string
 
 friend.sh
 - if statement
@@ -80,6 +81,8 @@ http://tldp.org/LDP/abs/html/comparison-ops.html
 https://www.youtube.com/watch?v=uqHjc7hlqd0&t=1602s
 https://www.computerhope.com/unix.htm
 https://ryanstutorials.net/bash-scripting-tutorial/bash-arithmetic.php
+http://workshop-bash.com/7-Brace-Expansion.html
+
 
 # Command Groups
 

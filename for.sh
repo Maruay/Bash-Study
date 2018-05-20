@@ -34,6 +34,16 @@ printf "Count has a value of ${count}\n"
 ((count++))
 done
 
+for value in {10..0..2};
+do
+echo $value
+done
+
+for seq in $(seq 0 2 10);
+do
+echo $seq
+done
+
 # note : unset - deleting value in array or the whole array
 
 # if [ -z "$1" ] || [ -z "$2" ]; then
